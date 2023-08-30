@@ -29,4 +29,6 @@ public class UsuarioValidacion {
             throw new Exception(Mensaje.FORMATO_CORREO.getMensaje());
         }return true;
     }
+
+
 }
