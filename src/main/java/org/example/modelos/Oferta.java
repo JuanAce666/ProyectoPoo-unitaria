@@ -94,7 +94,7 @@ public class Oferta {
     public void setFechafin(String fechafin) {
         try {
             this.validacion.validarFormatoFecha(fechafin);
-            this.validacion.validarDirenciaFechas(this.fechainicio,this.util.convertirStringEnLocalDate(fechafin));
+            this.validacion.validarDiferenciaFechas(this.fechainicio,this.util.convertirStringEnLocalDate(fechafin));
             this.fechainicio=this.util.convertirStringEnLocalDate(fechafin);
 
         }catch (Exception error){

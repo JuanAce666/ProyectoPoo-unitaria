@@ -9,7 +9,7 @@ public class ReservaValidacion {
     //metodos ordinarios
     private Util util = new Util();
     public Boolean validarFechaRes(String fechaRes)throws Exception{
-        if (!util.buscarCoincidencia(fechaRes,"^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-({4})$")){
+        if (!util.buscarCoincidencia(fechaRes,"^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-\\d{4}$")){
             throw new Exception(Mensaje.FORMATO_FECHAOTRO.getMensaje());
         }return true;
     }
