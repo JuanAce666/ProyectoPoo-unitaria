@@ -91,4 +91,5 @@ public class Usuario {
             System.out.println(error.getMessage());
         }
     }
+    public void registrar(){}
 }

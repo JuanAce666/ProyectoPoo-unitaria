@@ -14,7 +14,9 @@ public enum Mensaje {
     FECHA_INICIO_FIN("La fecha inicial no puede ser mayor a la fecha final"),
     COSTO_PERSONA("El costo no puede ser negativo"),
     CANTIDAD_PERSONAS_RESERVA("el numero de personas solo pueden ser 4 "),
-    FORMATO_FECHAOTRO("Por Favor Revise el formato de la fecha que esta ingresando");
+    FORMATO_FECHAOTRO("Por Favor Revise el formato de la fecha que esta ingresando"),
+    TOPE_MEMBRESIA("EL TOPE NO PUEDE SER MAYOR 0 IGUAL A 100.000"),
+    COSTO_NEGATIVO_MEMBRESIA("NO PUEDE SER NEGATIVO");
     private String mensaje;
     Mensaje(String mensaje){this.mensaje = mensaje;}
     public String getMensaje(){return mensaje;}

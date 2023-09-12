@@ -1,25 +1,24 @@
 package org.example.modelos;
 
 import org.example.utilidades.Util;
-import org.example.validaciones.LocalValidacion;
-import org.example.validaciones.OfertaValidacion;
+import org.example.validaciones.EmpresaValidacion;
 
-public class Local {
+public abstract class Empresa {
     private int id;
     private String nit;
     private String nombre;
     private int ubicacion;
     private String descripcion;
 
-    private LocalValidacion validacion = new LocalValidacion();
+    private EmpresaValidacion validacion = new EmpresaValidacion();
 
     private Util util= new Util();
 
 
-    public Local() {
+    public Empresa() {
     }
 
-    public Local(int id, String nit, String nombre, int ubicacion, String descripcion) {
+    public Empresa(int id, String nit, String nombre, int ubicacion, String descripcion) {
         this.id = id;
         this.nit = nit;
         this.nombre = nombre;
@@ -29,7 +28,7 @@ public class Local {
 
     @Override
     public String toString() {
-        return "Local " +
+        return "Empresa " +
                 "id: " + id +
                 ", nit: '" + nit + '\'' +
                 ", nombre: '" + nombre + '\'' +
@@ -87,4 +86,6 @@ public class Local {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public abstract Double cobrar();
 }

@@ -4,7 +4,6 @@ import org.example.modelos.*;
 import org.example.validaciones.OfertaValidacion;
 import org.example.validaciones.UsuarioValidacion;
 
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +13,12 @@ public class Main {
         OfertaValidacion ofertaValidacion = new OfertaValidacion();
         Scanner wea= new Scanner(System.in);
         Usuario objetoUsuario = new Usuario();
-        Local objetoLocal = new Local();
+        Empresa objetoEmpresa = new Empresa() {
+            @Override
+            public Double cobrar() {
+                return null;
+            }
+        };
         Oferta objetoOferta = new Oferta();
         Reserva objetoReserva = new Reserva();
 
@@ -40,10 +44,10 @@ public class Main {
         objetoOferta.setCostopersona(Double.valueOf(wea.nextLine()));
 
         System.out.println("Ingrese el nit");
-        objetoLocal.setNit(wea.nextLine());
+        objetoEmpresa.setNit(wea.nextLine());
 
         System.out.println("Ingrese el nombre de la empresa");
-        objetoLocal.setNombre(wea.nextLine());
+        objetoEmpresa.setNombre(wea.nextLine());
 
         System.out.println("Ingrese la fecha de reserva");
         objetoReserva.setFechareserva(wea.nextLine());
