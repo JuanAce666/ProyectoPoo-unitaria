@@ -1,6 +1,8 @@
 package org.example.modelos;
 
-public class EmpresaCultural extends Empresa {
+import org.example.modelos.interfaces.IReporte;
+
+public class EmpresaCultural extends Empresa implements IReporte {
     private String entidad;
     private String mision;
     //private String emailContacto;
@@ -18,5 +20,20 @@ public class EmpresaCultural extends Empresa {
     @Override
     public Double cobrar(){
         return null;
+    }
+
+    @Override
+    public void generarReporte(String datos) {
+
+    }
+
+    @Override
+    public void buscarReporte(Integer id) {
+
+    }
+
+    @Override
+    public void editarReporte(Integer id, String datos) {
+
     }
 }

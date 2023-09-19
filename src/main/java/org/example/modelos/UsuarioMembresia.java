@@ -1,6 +1,9 @@
 package org.example.modelos;
 
-public class UsuarioMembresia extends Usuario {
+import org.example.modelos.interfaces.IAnalitica;
+import org.example.modelos.interfaces.IReporte;
+
+public class UsuarioMembresia extends Usuario implements IReporte, IAnalitica<UsuarioMembresia> {
 
     private Double costoMensual;
 
@@ -22,4 +25,28 @@ public class UsuarioMembresia extends Usuario {
 
     public void agregarInvitado(){}
 
+    @Override
+    public void generarReporte(String datos) {
+
+    }
+
+    @Override
+    public void buscarReporte(Integer id) {
+
+    }
+
+    @Override
+    public void editarReporte(Integer id, String datos) {
+
+    }
+
+    @Override
+    public void limpiarDatos(UsuarioMembresia datos) {
+        
+    }
+
+    @Override
+    public void calcularDispersion(UsuarioMembresia datos) {
+
+    }
 }
