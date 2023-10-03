@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.modelos.*;
+import org.example.entidades.*;
 import org.example.validaciones.OfertaValidacion;
 import org.example.validaciones.UsuarioValidacion;
 

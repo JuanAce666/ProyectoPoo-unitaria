@@ -1,4 +1,4 @@
-package org.example.modelos;
+package org.example.entidades;
 
 import org.example.utilidades.Util;
 import org.example.validaciones.EmpresaValidacion;
