@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.controladores.ControladorAfiliado;
 import org.example.entidades.*;
 import org.example.validaciones.OfertaValidacion;
 import org.example.validaciones.UsuarioValidacion;
@@ -9,9 +10,15 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        UsuarioValidacion usuarioValidacion = new UsuarioValidacion();
-        OfertaValidacion ofertaValidacion = new OfertaValidacion();
         Scanner wea= new Scanner(System.in);
+        ControladorAfiliado controladorAfiliado = new ControladorAfiliado();
+        //llamar al metodo para registrar un afiliado
+        controladorAfiliado.registrarAfiliado("Juanfelipe","1000765022", "juanpepas@mail.com", 3);
+
+
+      /*  UsuarioValidacion usuarioValidacion = new UsuarioValidacion();
+        OfertaValidacion ofertaValidacion = new OfertaValidacion();
+
         Usuario objetoUsuario = new Usuario();
         Empresa objetoEmpresa = new Empresa() {
             @Override
@@ -55,6 +62,6 @@ public class Main {
         System.out.println("Ingrese el numero de personas para reservar");
         objetoReserva.setNumeroPer(wea.nextInt());
 
-        System.out.println("registro completo");
+        System.out.println("registro completo");*/
     }
 }
